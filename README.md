@@ -29,28 +29,60 @@ Overlap in message topics between train and test sets could cause information le
 - Applied encoding fix (`utf-8`) for robust CSV parsing.
 - Noted duplicates and highly similar entries, but retained them to avoid losing genuine repeated queries.
 
-#### How to run?
+# How to run?
 ### STEPS:
+
 Clone the repository
 
+```bash
+Clone the repository
 
+```
 ### STEP 01- Create a conda environment after opening the repository
- conda create -n medibot python=3.10 -y
 
+```bash
+ conda create -n medibot python=3.10 -y
+```
+
+```bash
  conda activate medibot
+```
 
 ### STEP 02- install the requirements
+```bash
 
 pip install -r requirements.txt
+```
 
-### create a .env file in the root directory and add your Pinecone & openai credentials as follows:
+
+### Create a `.env` file in the root directory and add your Pinecone & openai credentials as follows:
+
+```ini
  PINECONE_API_KEY = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
  GROQ_API_KEY = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+```
 
+
+```bash
 ## run the following command to store embeddings to pinecone
 python store_index.py
+```
 
+```bash
 ## Finally run the following command
 python app.py
+```
 
+Now,
+```bash
 open up localhost: http://localhost:8080/apidocs
+```
+
+
+### Techstack Used:
+
+- Python
+- LangChain
+- Flask
+- Groq
+- Pinecone
