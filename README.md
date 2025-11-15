@@ -47,10 +47,10 @@ pip install -r requirements.txt
  PINECONE_API_KEY = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
  GROQ_API_KEY = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 
- # run the following command to store embeddings to pinecone
+## run the following command to store embeddings to pinecone
 python store_index.py
 
-# Finally run the following command
+## Finally run the following command
 python app.py
 
 open up localhost: http://localhost:8080/apidocs
